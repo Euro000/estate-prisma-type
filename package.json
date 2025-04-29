@@ -1,0 +1,30 @@
+{
+  "name": "estate-prisma-type",
+  "version": "0.0.1",
+  "description": "Shared Prisma entities & enums for Estate projects",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**",
+    "src/generated/**",
+    "prisma/schema.prisma"
+  ],
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "generate": "prisma generate",
+    "build": "tsc -p tsconfig.json",
+    "dev": "ts-node src/index.ts",
+    "prepublishOnly": "yarn generate && yarn build"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.15.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.15.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.4"
+  },
+  "keywords": [ "prisma", "types", "estate" ],
+  "author": "Euro000",
+  "license": "MIT"
+}
