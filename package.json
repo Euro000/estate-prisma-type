@@ -1,6 +1,6 @@
 {
   "name": "estate-prisma-type",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Shared Prisma entities & enums for Estate projects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,9 +14,9 @@
   },
   "scripts": {
     "generate": "prisma generate",
-    "build":    "tsc -p tsconfig.json && cp -R src/generated dist/generated",
-    "prepare":  "yarn generate && yarn build",
-    "dev":      "ts-node src/index.ts"
+    "build": "tsc -p tsconfig.json && cp -R src/generated dist/generated",
+    "prepare": "yarn generate && yarn build",
+    "dev": "ts-node src/index.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.15.0"
