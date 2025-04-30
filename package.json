@@ -14,10 +14,9 @@
   },
   "scripts": {
     "generate": "prisma generate",
-    "build": "tsc -p tsconfig.json",
-    "dev": "ts-node src/index.ts",
-    "prepare": "yarn generate && yarn build",
-    "prepublishOnly": "yarn generate && yarn build"
+    "build":    "tsc -p tsconfig.json && cp -R src/generated dist/generated",
+    "prepare":  "yarn generate && yarn build",
+    "dev":      "ts-node src/index.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.15.0"
