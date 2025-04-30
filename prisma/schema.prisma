@@ -1,16 +1,14 @@
-// --- datasource -------------------------------------------------------------
 datasource db {
-  provider = "sqlite" // self-contained; no env vars required
+  provider = "sqlite"
   url      = "file:./dev.db"
 }
 
-// --- client generator -------------------------------------------------------
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated" // generates TS + JS into src/generated
+  output   = "../src/generated"
 }
 
-// --- demo models (replace with your real ones later) ------------------------
+//demo
 model User {
   id        String   @id @default(cuid())
   email     String   @unique
