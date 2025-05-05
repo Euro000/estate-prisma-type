@@ -1,26 +1,25 @@
 {
   "name": "estate-prisma-type",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Flat entity interfaces stripped from decorated backend classes",
   "types": "src/index.d.ts",
-
-  "files": [ "src/index.d.ts" ],
+  "files": [
+    "src/index.d.ts"
+  ],
   "sideEffects": false,
-
   "scripts": {
     "generate:entities": "ts-node scripts/gen-clean-entities.ts",
     "prepublishOnly": "npm run generate:entities"
   },
-
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-
   "devDependencies": {
     "ts-morph": "^22.0.0",
     "typescript": "^5.4.4",
     "ts-node": "^10.9.2"
   },
-
-  "engines": { "node": ">=18" }
+  "engines": {
+    "node": ">=18"
+  }
 }
