@@ -21,6 +21,6 @@ project.getSourceFiles(ENTITIES).forEach(sf => {
   });
 });
 
-const banner = '/* Auto‑generated – DO NOT EDIT */\n\n';
+const banner = '/* DONT EDIT PLZ */\n\n';
 writeFileSync(OUT, banner + out.join('\n\n'));
 console.log(`✨  Wrote ${path.relative(process.cwd(), OUT)} (${out.length} entities)`);
