@@ -11,7 +11,7 @@ const out: string[] = [];
 
 project.getSourceFiles(ENTITIES).forEach(sf => {
   sf.getClasses().forEach(cls => {
-    const iface = `${cls.getName()}`;    // already ends with Entity
+    const iface = `${cls.getName()}`;
     const fields = cls.getProperties().map(p => {
       const name = p.getName();
       const type = p.getType().getText().replace(/import\(.*?\)\./g, '');
