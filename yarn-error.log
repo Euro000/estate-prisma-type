@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/euro/.nvm/versions/node/v22.15.0/bin/node /usr/local/bin/yarn add estate-prisma-type@^0.0.2
+  /Users/euro/.nvm/versions/node/v22.15.0/bin/node /usr/local/bin/yarn add @nestjs/swagger
 
 PATH: 
   /Users/euro/.nvm/versions/node/v22.15.0/bin:/Users/euro/.nvm/versions/node/v20.19.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Users/euro/.nvm/versions/node/v20.19.0/bin:/Users/euro/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand
@@ -14,22 +14,12 @@ Platform:
   darwin arm64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/estate-prisma-type: Not found
-      at params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66145:18)
-      at self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140890:22)
-      at Request.emit (node:events:518:28)
-      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141862:10)
-      at Request.emit (node:events:518:28)
-      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141784:12)
-      at Object.onceWrapper (node:events:632:28)
-      at IncomingMessage.emit (node:events:530:35)
-      at endReadableNT (node:internal/streams/readable:1698:12)
-      at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+  Error: EACCES: permission denied, unlink '/Users/euro/Desktop/estate-prisma-type/node_modules/@cspotcode/source-map-support/LICENSE.md'
 
 npm manifest: 
   {
     "name": "estate-prisma-type",
-    "version": "0.0.2",
+    "version": "0.0.6",
     "description": "Shared Prisma entities & enums for Estate projects",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -43,10 +33,9 @@ npm manifest:
     },
     "scripts": {
       "generate": "prisma generate",
-      "build": "tsc -p tsconfig.json",
-      "dev": "ts-node src/index.ts",
+      "build": "tsc -p tsconfig.json && cp -R src/generated dist/generated",
       "prepare": "yarn generate && yarn build",
-      "prepublishOnly": "yarn generate && yarn build"
+      "dev": "ts-node src/index.ts"
     },
     "dependencies": {
       "@prisma/client": "^5.15.0"

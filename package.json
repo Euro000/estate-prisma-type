@@ -1,36 +1,26 @@
 {
   "name": "estate-prisma-type",
-  "version": "0.0.6",
-  "description": "Shared Prisma entities & enums for Estate projects",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist/**",
-    "src/generated/**",
-    "prisma/schema.prisma"
-  ],
-  "engines": {
-    "node": ">=22"
-  },
+  "version": "0.1.0",
+  "description": "Flat entity interfaces stripped from decorated backend classes",
+  "types": "src/index.d.ts",
+
+  "files": [ "src/index.d.ts" ],
+  "sideEffects": false,
+
   "scripts": {
-    "generate": "prisma generate",
-    "build": "tsc -p tsconfig.json && cp -R src/generated dist/generated",
-    "prepare": "yarn generate && yarn build",
-    "dev": "ts-node src/index.ts"
+    "generate:entities": "ts-node scripts/gen-clean-entities.ts",
+    "prepublishOnly": "npm run generate:entities"
   },
-  "dependencies": {
-    "@prisma/client": "^5.15.0"
+
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
+
   "devDependencies": {
-    "prisma": "^5.15.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.4"
+    "ts-morph": "^22.0.0",
+    "typescript": "^5.4.4",
+    "ts-node": "^10.9.2"
   },
-  "keywords": [
-    "prisma",
-    "types",
-    "estate"
-  ],
-  "author": "Euro000",
-  "license": "MIT"
+
+  "engines": { "node": ">=18" }
 }
