@@ -15,9 +15,11 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
+    "@nestjs/swagger": "^11.1.6",
+    "@types/node": "^22.15.3",
     "ts-morph": "^22.0.0",
-    "typescript": "^5.4.4",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.4"
   },
   "engines": {
     "node": ">=18"
