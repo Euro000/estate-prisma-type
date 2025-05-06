@@ -1,8 +1,35 @@
-/* Auto-generated barrel - DO NOT EDIT */
+/* Auto-generated - DONT EDIT */
 
-export type {
-  CommentEntity,
-  ReplyEntity,
-  PostEntity,
-  UserEntity,
-} from './flat-entities';
+export interface CommentEntity {
+  id: string;
+  postId: string;
+  userId: string;
+  body: string;
+  createdAt: Date;
+}
+
+export interface ReplyEntity {
+  id: string;
+  commentId: string;
+  userId: string;
+  body: string;
+  createdAt: Date;
+}
+
+export interface PostEntity {
+  id: string;
+  name: string;
+  likes: number;
+  userId: string;
+  yay_u: boolean;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface UserEntity {
+  id: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  createdAt: Date;
+}

@@ -4,7 +4,7 @@ import { writeFileSync } from 'fs';
 import * as path from 'path';
 
 const SOURCE_GLOB = 'src/entities/**/*.ts';
-const OUT_FILE    = 'src/index.d.ts';
+const OUT_FILE    = 'index.d.ts';
 
 const project = new Project({ tsConfigFilePath: 'tsconfig.json' });
 const pieces: string[] = [];
