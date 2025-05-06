@@ -1,11 +1,8 @@
-/* DONT EDIT PLZ */
+/* Auto‑generated barrel – DO NOT EDIT */
 
-export interface PostEntity {
-  id: string;
-  name: string;
-  likes: number;
-  userId: string;
-  yay_u: boolean;
-  createdAt: Date;
-  updatedAt: Date;
-}
+export type {
+  CommentEntity,
+  ReplyEntity,
+  PostEntity,
+  UserEntity,
+} from './flat-entities';

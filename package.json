@@ -4,7 +4,8 @@
   "description": "Flat entity interfaces stripped from decorated backend classes",
   "types": "src/index.d.ts",
   "files": [
-    "src/index.d.ts"
+    "src/index.d.ts",
+    "src/flat-entities.d.ts"
   ],
   "sideEffects": false,
   "scripts": {

@@ -2,4 +2,7 @@
 !dist
 !src/generated
 !prisma/schema.prisma
+src/entities/
+scripts/
+*.log
 README.md
