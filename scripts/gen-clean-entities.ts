@@ -11,13 +11,13 @@ const out: string[] = [];
 
 project.getSourceFiles(ENTITIES).forEach(sf => {
   sf.getClasses().forEach(cls => {
-    const iface = `${cls.getName()}`;
+    const face = `${cls.getName()}`;
     const fields = cls.getProperties().map(p => {
       const name = p.getName();
       const type = p.getType().getText().replace(/import\(.*?\)\./g, '');
       return `  ${name}: ${type};`;
     });
-    out.push(`export interface ${iface} {\n${fields.join('\n')}\n}`);
+    out.push(`export interface ${face} {\n${fields.join('\n')}\n}`);
   });
 });
 

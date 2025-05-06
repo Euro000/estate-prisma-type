@@ -16,6 +16,9 @@ export class PostEntity {
   @ApiProperty({ description: 'Custom boolean flag' })
   yay_u: boolean;
 
+  @ApiProperty({ description: 'Custom boolean flag' })
+  test: boolean;
+
   @ApiProperty({ description: 'When the post was created' })
   createdAt: Date;
 
