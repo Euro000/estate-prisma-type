@@ -1,6 +1,6 @@
 {
   "name": "estate-prisma-type",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Flat entity interfaces stripped from decorated backend classes",
   "types": "src/index.d.ts",
   "files": [
