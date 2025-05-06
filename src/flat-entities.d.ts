@@ -22,7 +22,6 @@ export interface PostEntity {
   likes: number;
   userId: string;
   yay_u: boolean;
-  test: boolean;
   createdAt: Date;
   updatedAt: Date;
 }

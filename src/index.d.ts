@@ -1,4 +1,4 @@
-/* Auto‑generated barrel – DO NOT EDIT */
+/* Auto-generated barrel - DO NOT EDIT */
 
 export type {
   CommentEntity,
